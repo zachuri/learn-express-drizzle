@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { CountiresService } from '../services/countries.service';
 
 export const CountiresController = {
-  async getAllCountries(req: Request, res: Response) {
+  async getAll(req: Request, res: Response) {
     try {
       const allCountries = await CountiresService.getAll();
       if (!allCountries) {
@@ -15,7 +15,7 @@ export const CountiresController = {
       res.status(500).json({ error: 'Internal Server Error' });
     }
   },
-  async getAllCountriesWithCities(req: Request, res: Response) {
+  async getAllWithCities(req: Request, res: Response) {
     try {
       const allCountriesWithCities = await CountiresService.getWithCities();
       if (!allCountriesWithCities) {
