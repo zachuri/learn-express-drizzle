@@ -14,13 +14,11 @@
 //   });
 // });
 
-
 // app.get('/citiesWithCountry', (req, res) => {
 //   getAllCitiesWithCountry().then(allCitiesWithCountry => {
 //     res.json(allCitiesWithCountry);
 //   });
 // });
-
 
 // // Please use POST for inserting data ;)
 // app.get('/insertCities', async (req, res) => {
@@ -37,6 +35,7 @@
 
 import express, { Request, Response, NextFunction } from 'express';
 import countriesRoute from './routes/countries.route';
+import citiesRoute from './routes/cities.route';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -45,6 +44,7 @@ app.use(express.json());
 
 // Register user routes
 app.use('/countries', countriesRoute);
+app.use('/cities', citiesRoute);
 
 // Error handling middleware
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
