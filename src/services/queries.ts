@@ -1,5 +1,5 @@
-import db from './db';
-import { cities, countries, City, Country } from './schema';
+import db from '../config/db.config';
+import { cities, countries, City, Country } from '../models/world.model';
 
 export async function getAllCities() {
   const allCities = await db.select().from(cities);
