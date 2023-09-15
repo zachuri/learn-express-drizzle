@@ -1,6 +1,6 @@
 import { drizzle } from 'drizzle-orm/postgres-js';
 import postgres from 'postgres';
-import * as schema from '../models/world.model';
+import * as schema from '../models/schema.model';
 
 if (!process.env.DATABASE_URL) {
   throw new Error('DATABASE_URL is missing');

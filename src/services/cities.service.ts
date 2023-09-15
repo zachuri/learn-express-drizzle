@@ -1,5 +1,5 @@
 import db from '../config/db.config';
-import { City, cities } from '../models/world.model';
+import { City, cities } from '../models/schema.model';
 
 export const CitiesService = {
   async getAll() {
